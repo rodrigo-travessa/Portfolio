@@ -2,29 +2,38 @@
 
 
 
-<div>
-    <table class="table table-striped border">
-        <thead class="table table-secondary">
-            Name
-        </thead>
+<div class="mt-5">
+    <table class="table table-hover">
         <thead>
-            Life Span
-        </thead>
-    
-    @{
-        foreach (var dog in Model)
-        {
             <tr>
-            <td>
-                <a asp-controller="Dog" asp-action="GetByBreed" asp-route-Name="@dog.Name">
-                    @dog.Name
-                    </a>
-            </td>
-            <td>
-                @dog.LifeSpan
-            </td>
+               <th scope="col"> <h3>Name</h3> </th>
+
+               <th scope="col"> <h3>Life Span</h3> </th>
+               <th scope="col"> <h3>Height</h3> </th>
+               <th scope="col"> <h3>Weight</h3> </th>
             </tr>
+        </thead>
+
+        @{
+            foreach (var dog in Model)
+            {
+                <tr>
+                    <td>
+                        <a asp-controller="Dog" asp-action="GetByBreed" asp-route-Name="@dog.Name">
+                            @dog.Name
+                        </a>
+                    </td>
+                    <td>
+                        @dog.LifeSpan
+                    </td>
+                    <td>
+                        @dog.Height.Metric Cm
+                    </td>
+                    <td>
+                        @dog.Weight.Metric Kgs
+                    </td>
+                </tr>
+            }
         }
-    }
     </table>
 </div>

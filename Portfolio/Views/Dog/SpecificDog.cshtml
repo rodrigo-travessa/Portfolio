@@ -1,0 +1,54 @@
+﻿@model List<DogModel>
+
+   @{
+    DogModel Dog = Model.First();
+    }
+<div>
+    <table class="table table-striped border">
+
+
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Field</th>
+            <th scope="col">Value</th>
+        </tr>
+    </thead>    
+    <tr>
+        <td>
+            ID            
+        </td>
+        <td>
+            @Dog.Id
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Breed Name            
+        </td>
+        <td>
+            @Dog.Name
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Life Span            
+        </td>
+        <td>
+            @Dog.LifeSpan
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Temperament            
+        </td>
+        <td>
+            @Dog.Temperament
+        </td>
+    </tr>
+    
+</table>
+</div>
+<div>
+
+<img src="@Dog.ImageURL" height="500px" width="500 px" alt="Sorry, No image to Display"/>
+</div>

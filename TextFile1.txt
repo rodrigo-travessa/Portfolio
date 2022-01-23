@@ -1,0 +1,8 @@
+dog api key x-api-key = 88839931-955c-484a-92eb-f4425ba44529
+
+headers[“x-api-key”] = "ABC123"
+
+https://api.TheDogAPI.com/v1/breeds  returns json with all breeds and info.
+
+GET https://api.thedogapi.com/v1/breeds/search?q= + raça //   search by race
+

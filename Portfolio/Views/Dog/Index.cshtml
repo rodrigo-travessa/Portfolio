@@ -1,0 +1,30 @@
+﻿@model List<DogModel>
+
+
+
+<div>
+    <table class="table table-striped border">
+        <thead class="table table-secondary">
+            Name
+        </thead>
+        <thead>
+            Life Span
+        </thead>
+    
+    @{
+        foreach (var dog in Model)
+        {
+            <tr>
+            <td>
+                <a asp-controller="Dog" asp-action="GetByBreed" asp-route-Name="@dog.Name">
+                    @dog.Name
+                    </a>
+            </td>
+            <td>
+                @dog.LifeSpan
+            </td>
+            </tr>
+        }
+    }
+    </table>
+</div>

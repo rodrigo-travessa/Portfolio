@@ -13,7 +13,8 @@
 @{
     @foreach (var Image in @Model)
     {
-        <img src="@Image.urls.small" width=19% height=19% class="mt-1 mb-1 ms-1 me-1"/>
+        <img src="@Image.urls.thumb" width="19%" height="19%" class="mt-1 mb-1 ms-1 me-1"/>
+       <div> @Image.user.name @Image.description / Likes ( @Image.likes )</div>
     }
 
 }

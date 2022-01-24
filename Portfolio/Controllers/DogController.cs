@@ -11,8 +11,11 @@ namespace Portfolio.Controllers
         public string _searchByBreed = "https://api.thedogapi.com/v1/breeds/search?q=";
         public string _apiKey = "88839931-955c-484a-92eb-f4425ba44529";
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string? search)
         {
+            if (search == null)
+            {
+
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("x-api-key", _apiKey);
 
@@ -21,7 +24,20 @@ namespace Portfolio.Controllers
             List<DogModel> DogList = JsonConvert.DeserializeObject<List<DogModel>>(conteudo);
             
             return View(DogList);
+            }
+            else
+            {
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("x-api-key", _apiKey);
+                string searchLink = _searchByBreed + search;
+                var conteudo = await client.GetStringAsync(searchLink);
+                List<DogModel> DogList = JsonConvert.DeserializeObject<List<DogModel>>(conteudo);
+
+                return View(DogList);
+
+            }
         }
+
 
         
         public async Task<IActionResult> GetByBreed(string Name)

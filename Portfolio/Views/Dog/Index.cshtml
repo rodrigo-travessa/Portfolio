@@ -1,8 +1,16 @@
 ﻿@model List<DogModel>
 
+    <div class="text-center mt-5">
+
+@using (Html.BeginForm("Index", "Dog", FormMethod.Post))
+{
+    <input id="search" name="search" placeholder="search..." type="text" />
+    <button id="botaoEnviar" type="submit">Enviar</button>
+}
+</div>
 
 
-<div class="mt-5">
+<div class="mt-3">
     <table class="table table-hover">
         <thead>
             <tr>

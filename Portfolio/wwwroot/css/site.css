@@ -16,31 +16,3 @@ html {
 body {
   margin-bottom: 60px;
 }
-.wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 10px;  
-    text-align:justify;
-    text-justify:auto;  
-    
-}
-.selfie {        
-    margin-left:auto;
-    margin-top: 2em;
-    
-    object-fit:cover ;
-    width: 90% !important;
-    height: 90% !important;
-    border-radius:10%;
-    
-}
-.logo {
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom:auto;
-    margin-right: auto;
-    object-fit:cover;
-    height:90%;
-    widht:90%;
-}

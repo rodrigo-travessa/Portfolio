@@ -108,45 +108,52 @@ body {
     text-align: justify-all;
 }
 
-@media screen and (max-width:680px) {
+@media screen and (max-width:1000px) {
     /* CSS for screens that are 320 pixels or less will be put in this section */
     .about-me-lines {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-items: center;        
+        justify-items: center;       
     }
-    
-
+    .about-me-lines-reverse {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        align-items: center;
+        justify-items: center;
+    }
     .about-me-images {
         margin-top: 2em;
         margin-left: 35%;
         width: auto;
         max-width: 30%;
         height: auto;
-        max-height: 388px;
-        
+        max-height: 388px;        
     }
 }
-@media screen and (min-width:680px) {
+@media screen and (min-width:1000px) {
     /* CSS for screens that are 320 pixels or less will be put in this section */
     .about-me-lines {
         display: flex;
         flex-wrap: nowrap;
         align-items: center;
         text-align: justify-all;
-       
-        ;
     }
-       
+
+    .about-me-lines-reverse {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-items: center;
+    }
+
     .about-me-images {
         margin-top: 5em;
         margin-left: 2em;
         width: auto;
         max-width: 30%;
         height: auto;
-        max-height: 388px;      
-        
+        max-height: 388px;
     }
 }
 

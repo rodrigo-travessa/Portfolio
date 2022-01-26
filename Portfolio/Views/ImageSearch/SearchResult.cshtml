@@ -16,8 +16,8 @@
             @{
                 @foreach (var Image in @Model)
                 {
-                    <div>
-                        <img style="border-radius:5%" src="@Image.urls.thumb" class="mt-3 mb-1 ms-1 me-1" />
+                    <div style="margin:1em;">
+                        <img style="border-radius:5%;" src="@Image.urls.thumb"/>
                         <div style="align-self:end"> @Image.user.name ( @Image.likes )</div>
                     </div>
                 }

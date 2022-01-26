@@ -99,9 +99,13 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width:100%;
-    text-align:justify-all;
+    width:100%;   
 
+}
+
+#about-me-text {
+    text-justify: inter-character;
+    text-align: justify-all;
 }
 
 @media screen and (max-width:680px) {
@@ -110,14 +114,9 @@ body {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-items:center;
+        justify-items: center;        
     }
-
-.about-me-text{
     
-
-}
-
 
     .about-me-images {
         margin-top: 2em;
@@ -134,13 +133,12 @@ body {
     .about-me-lines {
         display: flex;
         flex-wrap: nowrap;
-        align-items:center;
+        align-items: center;
+        text-align: justify-all;
+       
+        ;
     }
-
-    .about-me-text {
-    }
-
-
+       
     .about-me-images {
         margin-top: 5em;
         margin-left: 2em;

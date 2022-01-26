@@ -1,9 +1,16 @@
 ﻿
 <div class="text-center mt-5">
+      
+    
+    <form method="post" class="d-flex">
 
-@using (Html.BeginForm("ImageSearchResults", "ImageSearch", FormMethod.Post))
-{
-    <input id="searchTerm" name="searchTerm" placeholder="search..." type="text" />
-    <button id="botaoEnviar" type="submit">Enviar</button>
-}
+        <input class="form-control" type="text" asp-controller="ImageSearch" asp-action="ImageSearchResults" id="searchTerm" name="searchTerm" />
+        <button class="btn btn-secondary ms-2" type="submit" asp-controller="ImageSearch" asp-action="ImageSearchResults" > Search </button>
+
+    </form>
+
+
 </div>
+
+
+

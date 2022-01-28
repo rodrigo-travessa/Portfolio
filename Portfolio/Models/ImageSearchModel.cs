@@ -176,7 +176,8 @@ namespace Portfolio.Models
             public TopicSubmissions topic_submissions { get; set; }
             public User user { get; set; }
             public List<Tag> tags { get; set; }
-        }
+               
+    }
 
         public class Root
         {

@@ -36,5 +36,22 @@ namespace Portfolio.Controllers
             return View("SearchResult", SearchedResult);
                         
         }
+
+        
+        public IActionResult SpecificImageSearch(string full, string download)
+        {
+            if(full == null || download == null )
+            {
+
+                return View("SearchResult");
+            }
+            else
+            {
+                SpecificSearchImageResult result = new SpecificSearchImageResult(full, download);
+
+            return View("SpecificImageSearch", result);
+            } 
+
+        }
     }
 }

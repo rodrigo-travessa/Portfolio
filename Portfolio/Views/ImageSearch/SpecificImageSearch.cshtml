@@ -1,0 +1,27 @@
+﻿@using Portfolio.Models
+@model SpecificSearchImageResult
+
+@{
+    string downloadlink = @Model.download + "&force=true";
+
+    
+    <div style="width:100%;">
+       <button class="mt-5 btn btn primary" style="margin-left:44%"> <a href="@downloadlink">  Download  </a></button>
+         <img class="mt-5" style="width:100%" src="@Model.full"/>
+    </div>    
+
+}
+
+@*
+<button class="mt-5 btn btn primary" style="margin-left:44%"><a  href="@Model.download"> Download</a></button>
+
+https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?crop=entropy
+&cs=srgb
+&fm=jpg
+&ixid=MnwyOTQxODJ8MHwxfHNlYXJjaHwxfHxjYXJzfGVufDB8fHx8MTY0MzMwODI5NQ&ixlib=rb-1.2.1
+&q=85
+&force=true
+
+href="
+https://unsplash.com/photos/H-jkG2tnx8Q/download?ixid=MnwxMjA3fDB8MXxhbGx8NHx8fHx8fDJ8fDE2NDMzMzM4NTg&force=true"
+*@  

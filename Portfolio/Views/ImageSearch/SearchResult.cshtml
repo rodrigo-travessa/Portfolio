@@ -17,8 +17,10 @@
                 @foreach (var Image in @Model)
                 {
                     <div style="margin:1em;">
+                    <a asp-controller="ImageSearch" asp-action="SpecificImageSearch" asp-route-full="@Image.urls.full" asp-route-download="@Image.links.download" >
                         <img style="border-radius:5%;" src="@Image.urls.thumb"/>
-                        <div style="align-self:end"> @Image.user.name ( @Image.likes )</div>
+                    </a>
+                        <div style="align-self:end"><a>Photographer: @Image.user.name <br> Likes ( @Image.likes ) <br> On Unsplash.com</a></div>
                     </div>
                 }
 

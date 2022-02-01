@@ -4,15 +4,16 @@
 
     <form method="post" class="d-flex">
 
-        <input class="form-control" type="text" asp-controller="ImageSearch" asp-action="ImageSearchResults" id="searchTerm" name="searchTerm" />
+        <input class="form-control" type="text" asp-controller="ImageSearch" asp-action="ImageSearchResults" id="searchTerm" name="searchTerm" placeholder="What do you want to see?" />
         <button class="btn btn-secondary ms-2" type="submit" asp-controller="ImageSearch" asp-action="ImageSearchResults"> Search </button>
 
     </form>
 
 
-    <div class="mt-5">
+    <div class="mt-4">
+        <span> This Formating is Intentional, to Show the full picture without cropping or stretching.</span>
 
-        <div class="SearchImages-Wrapper">
+        <div class="SearchImages-Wrapper mt-3">
             @{
                 @foreach (var Image in @Model)
                 {
